@@ -43,7 +43,7 @@ if prompt := st.chat_input("Ask me anything..."):
         st.markdown(prompt)
 
     response = client.chat.completions.create(
-        model="nvidia/nemotron-3-super-120b-a12b:free",
+        model="meta-llama/llama-3.1-8b-instruct:free",
         messages=st.session_state.messages
     )
     reply = response.choices[0].message.content
